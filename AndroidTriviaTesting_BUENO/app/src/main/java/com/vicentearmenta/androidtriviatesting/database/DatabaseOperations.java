@@ -11,6 +11,7 @@ import com.vicentearmenta.androidtriviatesting.models.Answer;
 import com.vicentearmenta.androidtriviatesting.models.Question;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DatabaseOperations {
@@ -167,6 +168,8 @@ public class DatabaseOperations {
         }
 
         cursor.close();
+
+        Collections.shuffle(options);
 
         Question nextQuestion = new Question(
                 questionId,
